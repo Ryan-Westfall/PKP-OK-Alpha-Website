@@ -1,0 +1,306 @@
+Body {
+    font-family: 'Courier New', Courier, monospace;
+    min-width: 320px;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0px;
+  }
+
+
+
+/*  =============NAVIGATION============== */
+
+.nav-mobile {
+    /* background-color: rgb(231, 231, 231); */
+    background:transparent;
+    top: 30px;
+
+
+}
+
+.title-image{
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.title-image img{
+   height: 60px;
+}
+/*  =============ImageChanger============== */
+
+.fade-image {
+    text-align: center;
+    height: 500px;
+    overflow: hidden;
+}
+
+/*  =============Index============== */
+
+@media only screen and (min-width: 780px) {
+    .about-section {
+        padding-right: 14% !important;
+        padding-left: 14% !important;
+        font-size: 1.3em;
+    }
+
+    .wrapper-index{
+        grid-template-columns: auto auto ;
+        grid-template-areas: "pic-section about-section" !important;
+    }
+
+    /* .pic-section {
+        height: 780px;
+    } */
+  }
+
+  @media only screen and (min-width: 1070px) {
+    .wrapper-about{
+        grid-template-columns: auto auto ;
+        grid-template-areas: "pic-section1 about-section1" "about-section2 pic-section2" !important;
+    }
+  }
+
+
+.wrapper-index {
+    background-color: rgb(240, 240, 240);
+    overflow-x: hidden;
+    display: grid;
+    grid-template-areas: "pic-section1" 
+                         "about-section1";
+}
+
+
+.wrapper-about{
+    background-color: rgb(240, 240, 240);
+    overflow-x: hidden;
+    display: grid;
+    /* grid-template-columns: auto auto auto auto; */
+    grid-template-areas: "pic-section1" "about-section1" "pic-section2" "about-section2";
+}
+
+.wrapper-recruitment{
+    background-color: rgb(240, 240, 240);
+
+    overflow-x: hidden;
+    display: grid;
+    grid-template-areas: "pic-section"
+                         "about-section";
+}
+
+.pic-section {
+    display: block;
+    margin: auto;
+}
+
+
+.pic-section #one{
+    grid-area: pic-section1;
+    position: relative;
+}
+
+.pic-section #two{
+    grid-area: pic-section2;
+    position: relative;
+}
+
+.pic-section img {
+    max-width: 100%;
+    max-height: 500px;
+    filter: saturate(3) grayscale(20%);
+}
+
+.about-section {
+    position: relative;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-family:"freight-sans-pro";
+    top: -5px;
+}
+
+.about-section #one {
+    grid-area: about-section1;
+}
+
+.about-section #two {
+    grid-area: about-section2;
+}
+
+
+
+
+
+.about-section h1 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.about-section hr {
+    color: black;
+    size: 10px;
+}
+
+/*=======About Page=========*/
+
+
+
+/*=======Contact=========*/
+
+.contact-div {
+    height: 160px;
+    position: relative;
+    top: -10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: black;
+}
+
+.contact-div img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.right-box {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.left-box {
+    display:flex;
+    align-items:center;
+    justify-content:left;
+}
+
+.contact-div .left-box {
+    padding-left: 5%;
+}
+
+.contact-div .right-box {
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-div span {
+    color: white;
+    font-family: Poppins;
+}
+
+.contact-div p {
+    color: rgb(190, 178, 178);
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.contact-div #border{
+    position: relative;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgb(110, 110, 110);
+}
+
+
+
+/*=======Hamburger=========*/
+
+.hamburger-menu img {
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.hamburger-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.hamburger-list-item {
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+}
+
+.hamburger-list-item a {
+    font-family: Poppins;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed !important;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 20px;
+  }
+   
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #000000;
+  }
+   
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #a90000;
+  }
+   
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+   
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+   
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    overflow-y: hidden !important;
+
+  }
+   
+  /* General sidebar styles */
+  .bm-menu {
+    background:rgb(102, 101, 101);
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    overflow-y: hidden !important;
+
+  }
+   
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+   
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+   
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
+   
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
